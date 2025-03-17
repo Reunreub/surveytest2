@@ -74,6 +74,23 @@
                 document.getElementById('response-message').innerText = 'Error submitting form!';
             });
         });
+         // Theme Toggle Logic
+        document.getElementById('theme-toggle').addEventListener('change', function(e) {
+            const body = document.body;
+            if (e.target.checked) {
+                // Switch to Dark Mode
+                body.style.backgroundColor = '#333';
+                body.style.color = '#fff';
+                document.querySelector('.container').style.backgroundColor = '#444';
+                document.querySelector('.container').style.color = '#fff';
+            } else {
+                // Switch to Light Mode
+                body.style.backgroundColor = '#f4f4f4';
+                body.style.color = '#000';
+                document.querySelector('.container').style.backgroundColor = '#fff';
+                document.querySelector('.container').style.color = '#000';
+            }
+});
     </script>
 </body>
 </html>
